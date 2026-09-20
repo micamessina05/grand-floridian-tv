@@ -1,0 +1,45 @@
+GRAND FLORIDIAN RESORT TV — SHAREABLE WEB PAIRING
+==================================================
+
+This version does NOT need Terminal, Python, a .command file, or a local server.
+
+HOW IT WORKS
+------------
+• Each new Resort TV browser session automatically creates:
+  - its own 4-digit Room number
+  - its own 9-digit Session ID
+• The Connect My Device screen creates a QR code for that exact session.
+• The phone opens remote.html on the same published website.
+• PeerJS Cloud is used only for WebRTC signaling (introducing the two browsers).
+• Photos, videos, audio and controls are then sent browser-to-browser over WebRTC.
+
+IMPORTANT: THE WEBSITE MUST BE PUBLISHED ONLINE
+------------------------------------------------
+For QR pairing to work for anybody, host this folder on an HTTPS static website.
+Examples: GitHub Pages, Netlify, Cloudflare Pages, Vercel, etc.
+
+Opening index.html directly as file:// still displays the Resort TV, but the phone-pairing
+feature cannot work because a phone cannot navigate to another computer's local file path.
+
+NO BACKEND IS REQUIRED
+----------------------
+This build is static HTML/CSS/JS. The public PeerJS Cloud signaling service is used for pairing.
+For a production/commercial deployment, run your own PeerServer and TURN infrastructure.
+
+NETWORK LIMITATION
+------------------
+Most normal home/mobile networks should work. Some school, hotel, corporate or highly restricted
+networks block peer-to-peer WebRTC. In those cases pairing can fail unless a TURN relay is added.
+
+PRIVACY
+-------
+This project does not store uploaded media on a website server. Media is sent directly between
+paired browsers. Do not use the session ID for sensitive/private content on a shared screen.
+
+TEST
+----
+1. Publish the entire folder to an HTTPS static host.
+2. Open index.html on a laptop/TV browser.
+3. Open CONNECT MY DEVICE.
+4. Scan the QR with a phone.
+5. The phone should connect to the generated Room number and control the TV page.

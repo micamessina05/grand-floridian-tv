@@ -1,0 +1,32 @@
+HIGH-RES DISNEY ON DEMAND IMAGE SOURCES
+
+The Disney On Demand tile photos in this build are loaded from Wikimedia Commons original-resolution files to avoid the blur caused by enlarging the photographed-TV reference image. The title bars and Resort TV interface are part of this project; the photos remain linked to their original Commons files.
+
+1. Chairman’s Welcome Message — Josh D'Amaro (cropped)
+   https://commons.wikimedia.org/wiki/File:Josh_D%27Amaro_(49607223226)_(cropped).jpg
+2. The Most Magical Story on Earth — Magic Kingdom Cinderella Castle 50TH
+   https://commons.wikimedia.org/wiki/File:Magic_Kingdom_Cinderella_Castle_50TH.jpg
+3. Happily Ever After — Disneyworld fireworks - 0230
+   https://commons.wikimedia.org/wiki/File:Disneyworld_fireworks_-_0230.jpg
+4. Disney Springs — The Springs of Disney Springs (26476609884)
+   https://commons.wikimedia.org/wiki/File:The_Springs_of_Disney_Springs_(26476609884).jpg
+5. Drawn to Life — Cirque du Soleil venue at Downtown Disney
+   https://commons.wikimedia.org/wiki/File:Venue_for_Cirque_du_Soleil%27s_La_Nouba_at_Downtown_Disney.jpg
+6. Disney Water Parks — WDW Typhoon Lagoon Surf Pool
+   https://commons.wikimedia.org/wiki/File:WDW_Typhoon_Lagoon_Surf_Pool.JPG
+7. Stay Magical — Grand Floridian from Seven Seas Lagoon
+   https://commons.wikimedia.org/wiki/File:Disney%27s_Grand_Floridian_Resort_%26_Spa_from_Seven_Seas_Lagoon_1.jpg
+8. Meet Disney Genie Service — Josh D'Amaro and Bob Chapek at Magic Kingdom
+   https://commons.wikimedia.org/wiki/File:Josh_D%27Amaro_and_Bob_Chapek_(49607223226).jpg
+9. Tip Board & My Day — Cinderella Castle
+   https://commons.wikimedia.org/wiki/File:Magic_Kingdom_-_Cinderella_Castle_-_by_cdharrison.jpg
+10. Lightning Lane Entrances — Space Mountain
+   https://commons.wikimedia.org/wiki/File:Space_Mountain_in_the_Magic_Kingdom_in_2021.jpg
+11. Purchasing Individually — Seven Dwarfs Mine Train
+   https://commons.wikimedia.org/wiki/File:Seven_Dwarfs_Mine_Train.jpg
+12. Selecting through Disney Genie+ Service — Grand Floridian and Motor Launch
+   https://commons.wikimedia.org/wiki/File:Disney%27s_Grand_Floridian_Resort_%26_Spa_and_Motor_Launch.jpg
+
+Please see each Wikimedia Commons source page for author attribution and license details.
+
+Chairman portrait — Josh D'Amaro (49607223226) (cropped), Wikimedia Commons, CC BY-SA 2.0, original 1357x1697.

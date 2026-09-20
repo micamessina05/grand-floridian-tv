@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+<title>Grand Floridian • Device Controller</title>
+<style>
+:root{--rose:#aa6270;--rose2:#c07a86;--roseSoft:#f2e4e7;--cream:#f6efe5;--cream2:#fffaf3;--ink:#4b423e;--muted:#7e7069;--blue:#0d67c2;--gold:#c6a24e;--line:rgba(101,79,67,.13);--green:#34ae70}
+*{box-sizing:border-box}html{background:#eee5d9}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:radial-gradient(circle at 80% 0,rgba(191,119,133,.12),transparent 28%),linear-gradient(180deg,#fbf7f1,#eee5d9);color:var(--ink);min-height:100vh}.top{position:relative;overflow:hidden;background:linear-gradient(180deg,var(--rose2),var(--rose));color:#fff;padding:max(21px,env(safe-area-inset-top)) 22px 20px;border-bottom:3px solid var(--gold);box-shadow:0 5px 20px rgba(82,45,50,.12)}.top:after{content:"";position:absolute;width:170px;height:170px;border:22px solid rgba(255,255,255,.035);border-radius:50%;right:-55px;top:-70px}.brand{font-size:11px;letter-spacing:.18em;font-weight:800;opacity:.82}.room{font-size:28px;font-weight:780;margin-top:6px;letter-spacing:-.02em}.wrap{max-width:640px;margin:auto;padding:18px 16px 34px}.card{background:rgba(255,255,255,.92);border:1px solid var(--line);border-radius:22px;padding:18px;box-shadow:0 10px 28px rgba(66,47,35,.07);margin-bottom:14px}.status{display:flex;align-items:center;gap:11px;font-weight:750}.dot{width:11px;height:11px;border-radius:50%;background:#b5aaa4}.dot.ok{background:var(--green);box-shadow:0 0 0 5px rgba(52,174,112,.12)}h1{font-size:31px;line-height:1.04;margin:0 0 9px;letter-spacing:-.035em}h2{font-size:20px;margin:0 0 13px;letter-spacing:-.015em}.muted{color:var(--muted);font-size:14px;line-height:1.45}.pair{display:grid;gap:10px}.codeInput,input[type=url],input[type=text]{width:100%;border:1px solid #d5c7bd;border-radius:14px;padding:15px 16px;font-size:17px;background:#fff;color:var(--ink);outline:none;transition:.18s}.codeInput:focus,input[type=url]:focus,input[type=text]:focus{border-color:#b77884;box-shadow:0 0 0 4px rgba(183,120,132,.11)}.codeInput{text-align:center;letter-spacing:.23em;font-weight:780;font-size:24px;background:linear-gradient(180deg,#fff,#fffaf7)}.btn{width:100%;border:0;border-radius:14px;padding:15px 16px;font-size:15px;font-weight:820;letter-spacing:.025em;cursor:pointer;background:linear-gradient(180deg,#b86f7c,#a75e6c);color:#fff;box-shadow:0 6px 15px rgba(169,94,108,.16)}.btn:active{transform:translateY(1px)}.btn.blue{background:linear-gradient(180deg,#1974ce,#0d61b5)}.btn.soft{background:#eee8e1;color:#5a504b;box-shadow:none}.btn.red{background:linear-gradient(180deg,#c5515f,#ae3d4a)}.row{display:grid;grid-template-columns:1fr 1fr;gap:10px}.upload{display:block;border:2px dashed #d3c3b7;border-radius:18px;padding:25px 18px;text-align:center;background:linear-gradient(180deg,#fffdf9,#faf5ee);cursor:pointer;font-weight:760;color:#6b5c55}.upload input{display:none}.small{font-size:12px;color:#8d8079;line-height:1.4}.sep{height:1px;background:var(--line);margin:17px 0}.connectedOnly{display:none}.connected .connectedOnly{display:block}.connected .pairOnly{display:none}.toast{position:fixed;left:50%;bottom:max(20px,env(safe-area-inset-bottom));transform:translateX(-50%) translateY(20px);opacity:0;background:#292522;color:#fff;border-radius:999px;padding:12px 17px;font-size:13px;transition:.2s;pointer-events:none;box-shadow:0 8px 24px rgba(0,0,0,.15)}.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}.sending{font-size:13px;margin-top:10px;color:#765f53;display:none}.sending.on{display:block}.card:first-child{background:linear-gradient(135deg,rgba(255,255,255,.95),rgba(248,239,233,.95))}.pairOnly{position:relative;overflow:hidden}.pairOnly:after{content:"";position:absolute;width:140px;height:140px;border-radius:50%;background:rgba(180,103,119,.055);right:-55px;top:-55px;pointer-events:none}input[type=range]{accent-color:var(--rose)}
+</style>
+</head>
+<body>
+<header class="top"><div class="brand">DISNEY'S GRAND FLORIDIAN RESORT &amp; SPA</div><div class="room" id="roomHeading">Device Controller</div></header>
+<main class="wrap" id="app">
+  <section class="card">
+    <div class="status"><span class="dot" id="statusDot"></span><span id="statusText">Not connected</span></div>
+    <p class="muted" id="statusDetail">Ready to pair with your Resort TV session.</p>
+  </section>
+
+  <section class="card pairOnly">
+    <h1 id="connectHeading">Connect to Resort TV</h1>
+    <p class="muted">Enter the session ID shown on the TV. If you scanned the QR code, it is already filled in for you.</p>
+    <div class="pair">
+      <input class="codeInput" id="pairCode" inputmode="numeric" autocomplete="one-time-code" maxlength="11" placeholder="000 000 000" />
+      <input type="text" id="deviceName" maxlength="64" placeholder="Device name (optional)" />
+      <button class="btn" id="pairButton">CONNECT</button>
+    </div>
+  </section>
+
+  <div class="connectedOnly">
+    <section class="card">
+      <h2>Send media to your Resort TV</h2>
+      <label class="upload">Choose a photo, video or audio file<input id="mediaFile" type="file" accept="image/*,video/*,audio/*" /></label>
+      <div class="sending" id="sending">Sending directly to the Resort TV…</div>
+      <p class="small">For reliability, keep individual files under 75 MB. Files are sent directly through the browser connection and are not uploaded to this website.</p>
+    </section>
+
+    <section class="card">
+      <h2>Send YouTube to the TV</h2>
+      <input type="url" id="youtubeUrl" placeholder="Paste a YouTube link" />
+      <button class="btn blue" id="youtubeButton" style="margin-top:10px">PLAY ON TV</button>
+    </section>
+
+    <section class="card">
+      <h2>Playback controls</h2>
+      <div class="row"><button class="btn soft" data-control="play">▶ PLAY</button><button class="btn soft" data-control="pause">Ⅱ PAUSE</button></div>
+      <div class="row" style="margin-top:10px"><button class="btn soft" data-control="mute">MUTE</button><button class="btn soft" data-control="unmute">UNMUTE</button></div>
+      <label class="muted" style="display:block;margin-top:14px">Volume <input id="volume" type="range" min="0" max="1" step="0.05" value="1" style="width:100%"></label>
+      <div class="sep"></div>
+      <button class="btn red" id="clearButton">RETURN TO RESORT TV</button>
+    </section>
+  </div>
+</main>
+<div class="toast" id="toast"></div>
+<script src="https://unpkg.com/peerjs@1.5.5/dist/peerjs.min.js"></script>
+<script src="remote.js"></script>
+</body>
+</html>

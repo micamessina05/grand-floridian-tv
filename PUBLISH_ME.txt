@@ -1,0 +1,14 @@
+PUBLISHING THIS VERSION
+
+This folder is ready for static HTTPS hosting.
+
+Recommended: Vercel
+1. Upload the CONTENTS of this folder to your GitHub repository (not the containing folder itself).
+2. In Vercel, choose Add New > Project.
+3. Import the GitHub repository.
+4. Framework Preset: Other.
+5. Leave Build Command empty.
+6. Leave Output Directory empty.
+7. Deploy.
+
+After deployment, Connect My Device will detect HTTPS and enable cloud pairing automatically.

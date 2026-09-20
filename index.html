@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Grand Floridian Resort TV</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="resort-tv" id="resortTv" aria-label="Grand Floridian inspired resort television interface">
+    <header class="top-banner">
+      <div class="brand-lockup" aria-label="Disney's Grand Floridian Resort and Spa">
+        <img src="assets/brand-wordmark-white-8k.png" alt="Disney's Grand Floridian Resort and Spa" />
+      </div>
+      <div class="room-number">ROOM <span id="roomNumber">7229</span></div>
+    </header>
+
+    <section class="screen-stage" aria-live="polite">
+      <div class="screen screen-home active" id="homeScreen">
+        <section class="welcome-strip">
+          <div class="guest-block">
+            <div class="member-mark" aria-hidden="true">
+              <img src="assets/member-badge-white-8k.png" alt="" />
+            </div>
+            <div class="welcome-copy">
+              <div class="eyebrow">WELCOME HOME</div>
+              <div class="family-name" id="familyName">Guest Name</div>
+              <button class="change-guest-button" id="changeGuestButton" type="button">CHANGE GUEST</button>
+            </div>
+          </div>
+
+          <div class="status-block">
+            <div class="status-topline">
+              <svg class="weather-icon" viewBox="0 0 64 40" aria-hidden="true">
+                <path d="M12.5 31.5h30.2c5.8 0 10.5-4.2 10.5-9.4 0-5.1-4.7-9.3-10.5-9.3-.9 0-1.9.1-2.8.3C38 8.1 33.2 5 27.8 5c-6.6 0-12.1 4.6-12.9 10.5-5 .8-8.9 4.8-8.9 9.7 0 5.5 4.8 10 10.8 10h1.2" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <span id="temperature">82°F</span>
+              <span class="time" id="clock">4:10 PM</span>
+            </div>
+            <div class="date" id="dateLine">SATURDAY, AUGUST 15TH, 2026</div>
+          </div>
+        </section>
+
+        <section class="resort-image" aria-label="Grand Floridian resort view">
+          <img src="assets/grand-floridian-view-ultra-clean.jpg" alt="Grand Floridian resort buildings and lagoon" />
+          <div class="bird-layer" aria-hidden="true">
+            <svg class="bird bird-1" viewBox="0 0 36 16"><path d="M2 12c5-8 9-8 14 0 4-7 8-7 18 0"/></svg>
+            <svg class="bird bird-2" viewBox="0 0 36 16"><path d="M2 12c5-8 9-8 14 0 4-7 8-7 18 0"/></svg>
+            <svg class="bird bird-3" viewBox="0 0 36 16"><path d="M2 12c5-8 9-8 14 0 4-7 8-7 18 0"/></svg>
+            <svg class="bird bird-4" viewBox="0 0 36 16"><path d="M2 12c5-8 9-8 14 0 4-7 8-7 18 0"/></svg>
+            <svg class="bird bird-5" viewBox="0 0 36 16"><path d="M2 12c5-8 9-8 14 0 4-7 8-7 18 0"/></svg>
+          </div>
+          <div class="soft-light"></div>
+        </section>
+      </div>
+
+      <section class="screen screen-disney" id="disneyScreen" hidden aria-label="Disney Plus and On Demand submenu">
+        <div class="disney-submenu-header">
+          <div class="disney-submenu-title">
+            <svg class="submenu-mickey" viewBox="0 0 647 527" aria-hidden="true">
+              <path d="M 63 44 L 44 63 L 44 72 L 28 87 L 28 96 L 20 103 L 20 128 L 12 135 L 12 152 L 20 159 L 20 184 L 36 199 L 36 208 L 47 219 L 56 219 L 71 235 L 88 235 L 95 243 L 136 243 L 140 247 L 140 272 L 132 279 L 132 360 L 140 367 L 140 384 L 148 391 L 148 408 L 164 423 L 164 432 L 207 475 L 216 475 L 231 491 L 248 491 L 255 499 L 272 499 L 279 507 L 320 507 L 326 515 L 329 515 L 335 507 L 384 507 L 391 499 L 400 499 L 407 491 L 416 491 L 423 483 L 432 483 L 447 467 L 456 467 L 491 432 L 491 423 L 499 416 L 499 407 L 507 400 L 507 391 L 515 384 L 515 367 L 523 360 L 523 279 L 515 272 L 515 247 L 519 243 L 552 243 L 559 235 L 576 235 L 583 227 L 592 227 L 627 192 L 627 175 L 635 168 L 635 119 L 627 112 L 627 95 L 619 88 L 619 79 L 576 36 L 567 36 L 560 28 L 551 28 L 544 20 L 527 20 L 520 12 L 463 12 L 456 20 L 439 20 L 432 28 L 423 28 L 396 55 L 396 64 L 388 71 L 388 104 L 380 110 L 381 114 L 386 116 L 388 121 L 376 132 L 271 132 L 267 128 L 267 79 L 259 72 L 259 63 L 216 20 L 199 20 L 192 12 L 127 12 L 120 20 L 103 20 L 96 28 L 87 28 L 72 44 Z M 267 255 L 271 251 L 288 251 L 295 259 L 304 259 L 311 267 L 320 267 L 327 275 L 336 275 L 343 283 L 352 283 L 359 291 L 368 291 L 375 299 L 384 299 L 404 318 L 404 321 L 384 340 L 375 340 L 368 348 L 359 348 L 352 356 L 343 356 L 336 364 L 327 364 L 320 372 L 311 372 L 304 380 L 295 380 L 288 388 L 271 388 L 267 384 Z" fill="currentColor" fill-rule="evenodd"/>
+            </svg>
+            <span>DISNEY+ &amp; ON DEMAND</span>
+          </div>
+          <button class="submenu-back-button" type="button" data-submenu-home-back aria-label="Back to Grand Floridian home">‹ BACK</button>
+        </div>
+
+        <div class="disney-submenu-body">
+          <div class="submenu-cards" role="list">
+            <button class="submenu-card is-selected" type="button" data-subcard="Disney+">
+              <div class="submenu-card-image-wrap">
+                <img src="https://lumiere-a.akamaihd.net/v1/images/cd_movies-en-us_f738c546.png?region=0%2C2%2C2000%2C1125" alt="Disney+ movies and shows" class="submenu-card-image official-disney-media" />
+              </div>
+              <div class="submenu-card-caption submenu-card-caption-primary">
+                <div class="submenu-card-title">Disney+</div>
+                <div class="submenu-card-text">Sign in to Disney+ using your MyDisney account to watch all your favorites.</div>
+              </div>
+            </button>
+
+            <button class="submenu-card" type="button" data-subcard="Disney on Demand">
+              <div class="submenu-card-image-wrap">
+                <img src="https://cdn1.parksmedia.wdprapps.disney.com/resize/mwImage/1/1600/900/75/vision-dam/digital/parks-platform/parks-global-assets/disney-world/attractions/cinderella-castle/MK17-HappilyEverAfter0507-263_1-16x9.jpg?2022-03-10T19%3A31%3A46+00%3A00=" alt="Castle fireworks for Disney on Demand" class="submenu-card-image official-fireworks-media" />
+              </div>
+              <div class="submenu-card-caption submenu-card-caption-secondary">
+                <div class="submenu-card-title">Disney on Demand</div>
+                <div class="submenu-card-text">An entertaining library of bedtime stories, fireworks and more!</div>
+              </div>
+            </button>
+          </div>
+        </div>
+
+        <div class="disney-submenu-footer">
+          <div class="submenu-footer-logo-wrap">
+            <img src="https://lumiere-a.akamaihd.net/v1/images/disney_logo_march_2024_050fef2e.png?region=0%2C0%2C1920%2C1080" alt="Disney Plus" class="submenu-footer-logo official-disneyplus-logo" />
+          </div>
+          <div class="submenu-footer-copy">
+            Press SELECT for Disney+ account support information, including how to log out before checkout.
+          </div>
+        </div>
+      </section>
+
+      <section class="screen screen-disney-ondemand" id="disneyOnDemandScreen" hidden aria-label="Disney On Demand screen">
+        <div class="ondemand-header">
+          <div class="ondemand-title-wrap">
+            <div class="ondemand-title">
+              <svg class="submenu-mickey" viewBox="0 0 647 527" aria-hidden="true">
+                <path d="M 63 44 L 44 63 L 44 72 L 28 87 L 28 96 L 20 103 L 20 128 L 12 135 L 12 152 L 20 159 L 20 184 L 36 199 L 36 208 L 47 219 L 56 219 L 71 235 L 88 235 L 95 243 L 136 243 L 140 247 L 140 272 L 132 279 L 132 360 L 140 367 L 140 384 L 148 391 L 148 408 L 164 423 L 164 432 L 207 475 L 216 475 L 231 491 L 248 491 L 255 499 L 272 499 L 279 507 L 320 507 L 326 515 L 329 515 L 335 507 L 384 507 L 391 499 L 400 499 L 407 491 L 416 491 L 423 483 L 432 483 L 447 467 L 456 467 L 491 432 L 491 423 L 499 416 L 499 407 L 507 400 L 507 391 L 515 384 L 515 367 L 523 360 L 523 279 L 515 272 L 515 247 L 519 243 L 552 243 L 559 235 L 576 235 L 583 227 L 592 227 L 627 192 L 627 175 L 635 168 L 635 119 L 627 112 L 627 95 L 619 88 L 619 79 L 576 36 L 567 36 L 560 28 L 551 28 L 544 20 L 527 20 L 520 12 L 463 12 L 456 20 L 439 20 L 432 28 L 423 28 L 396 55 L 396 64 L 388 71 L 388 104 L 380 110 L 381 114 L 386 116 L 388 121 L 376 132 L 271 132 L 267 128 L 267 79 L 259 72 L 259 63 L 216 20 L 199 20 L 192 12 L 127 12 L 120 20 L 103 20 L 96 28 L 87 28 L 72 44 Z M 267 255 L 271 251 L 288 251 L 295 259 L 304 259 L 311 267 L 320 267 L 327 275 L 336 275 L 343 283 L 352 283 L 359 291 L 368 291 L 375 299 L 384 299 L 404 318 L 404 321 L 384 340 L 375 340 L 368 348 L 359 348 L 352 356 L 343 356 L 336 364 L 327 364 L 320 372 L 311 372 L 304 380 L 295 380 L 288 388 L 271 388 L 267 384 Z" fill="currentColor" fill-rule="evenodd"/>
+              </svg>
+              <span>DISNEY ON DEMAND</span>
+            </div>
+            <nav class="ondemand-tabs" aria-label="Disney On Demand categories">
+              <button class="ondemand-tab is-active" type="button" data-ondemand-filter="all">All</button>
+              <button class="ondemand-tab" type="button" data-ondemand-filter="disneyplus">Meet Disney+</button>
+              <button class="ondemand-tab" type="button" data-ondemand-filter="vacations">Disney Vacations</button>
+              <button class="ondemand-tab" type="button" data-ondemand-filter="wellness">Disney Family Wellness</button>
+              <button class="ondemand-tab" type="button" data-ondemand-filter="stories">Fireworks &amp; Stories</button>
+              <button class="ondemand-tab" type="button" data-ondemand-filter="starwars">Star Wars Shorts</button>
+            </nav>
+          </div>
+          <button class="ondemand-back-button" type="button" data-ondemand-back aria-label="Back to Disney and On Demand submenu">‹ BACK</button>
+        </div>
+
+        <div class="ondemand-grid" id="ondemandGrid">
+          <button class="ondemand-item" type="button" data-ondemand-tags="vacations" aria-label="Chairman’s Welcome Message" data-ondemand-key="chairman-welcome">
+            <div class="ondemand-thumb"><img src="assets/ondemand/chairman-custom.jpg" alt="Chairman’s Welcome Message"></div>
+            <div class="ondemand-label">
+              <strong>Chairman’s Welcome Message</strong>
+              <span>A welcome to Walt Disney World</span>
+            </div>
+          </button>
+          <button class="ondemand-item" type="button" data-ondemand-tags="stories" aria-label="The Most Magical Story on Earth" data-ondemand-key="magical-story">
+            <div class="ondemand-thumb"><img src="https://upload.wikimedia.org/wikipedia/commons/2/2e/Magic_Kingdom_Cinderella_Castle_50TH.jpg" alt="The Most Magical Story on Earth"></div>
+            <div class="ondemand-label">
+              <strong>The Most Magical Story on Earth</strong>
+              <span>Celebrating Walt Disney World</span>
+            </div>
+          </button>
+          <button class="ondemand-item" type="button" data-ondemand-tags="stories" aria-label="Happily Ever After" data-ondemand-key="happily-ever-after">
+            <div class="ondemand-thumb"><img src="https://upload.wikimedia.org/wikipedia/commons/c/c0/Disneyworld_fireworks_-_0230.jpg" alt="Happily Ever After"></div>
+            <div class="ondemand-label">
+              <strong>Happily Ever After</strong>
+              <span>Magic Kingdom fireworks spectacular</span>
+            </div>
+          </button>
+          <button class="ondemand-item" type="button" data-ondemand-tags="vacations" aria-label="Disney Springs" data-ondemand-key="disney-springs">
+            <div class="ondemand-thumb"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b0/The_Springs_of_Disney_Springs_%2826476609884%29.jpg" alt="Disney Springs"></div>
+            <div class="ondemand-label">
+              <strong>Disney Springs</strong>
+              <span>Shopping, dining & entertainment</span>
+            </div>
+          </button>
+          <button class="ondemand-item" type="button" data-ondemand-tags="stories" aria-label="Drawn to Life" data-ondemand-key="drawn-to-life">
+            <div class="ondemand-thumb"><img src="https://upload.wikimedia.org/wikipedia/commons/f/f8/Venue_for_Cirque_du_Soleil%27s_La_Nouba_at_Downtown_Disney.jpg" alt="Drawn to Life"></div>
+            <div class="ondemand-label">
+              <strong>Drawn to Life</strong>
+              <span>Cirque du Soleil & Disney</span>
+            </div>
+          </button>
+          <button class="ondemand-item" type="button" data-ondemand-tags="vacations" aria-label="Disney Water Parks" data-ondemand-key="water-parks">
+            <div class="ondemand-thumb"><img src="https://upload.wikimedia.org/wikipedia/commons/0/0b/WDW_Typhoon_Lagoon_Surf_Pool.JPG" alt="Disney Water Parks"></div>
+            <div class="ondemand-label">
+              <strong>Disney Water Parks</strong>
+              <span>Splash into a Disney day</span>
+            </div>
+          </button>
+          <button class="ondemand-item" type="button" data-ondemand-tags="vacations" aria-label="Stay Magical" data-ondemand-key="stay-magical">
+            <div class="ondemand-thumb"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a8/Disney%27s_Grand_Floridian_Resort_%26_Spa_from_Seven_Seas_Lagoon_1.jpg" alt="Stay Magical"></div>
+            <div class="ondemand-label">
+              <strong>Stay Magical</strong>
+              <span>Disney Vacation Club</span>
+            </div>
+          </button>
+          <button class="ondemand-item" type="button" data-ondemand-tags="wellness" aria-label="Meet Disney Genie Service" data-ondemand-key="meet-genie">
+            <div class="ondemand-thumb"><img src="https://cache.undercovertourist.com/blog/2021/10/1021-genie-phone-in-front-of-castle-768x1064.jpg" alt="Meet Disney Genie Service"></div>
+            <div class="ondemand-label">
+              <strong>Meet Disney Genie Service</strong>
+              <span>Plan your Disney day</span>
+            </div>
+          </button>
+          <button class="ondemand-item" type="button" data-ondemand-tags="wellness" aria-label="Tip Board & My Day" data-ondemand-key="tip-board">
+            <div class="ondemand-thumb"><img src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Magic_Kingdom_-_Cinderella_Castle_-_by_cdharrison.jpg" alt="Tip Board & My Day"></div>
+            <div class="ondemand-label">
+              <strong>Tip Board & My Day</strong>
+              <span>Your day at a glance</span>
+            </div>
+          </button>
+          <button class="ondemand-item" type="button" data-ondemand-tags="wellness" aria-label="Lightning Lane Entrances" data-ondemand-key="lightning-lane">
+            <div class="ondemand-thumb"><img src="https://upload.wikimedia.org/wikipedia/commons/1/18/Space_Mountain_in_the_Magic_Kingdom_in_2021.jpg" alt="Lightning Lane Entrances"></div>
+            <div class="ondemand-label">
+              <strong>Lightning Lane Entrances</strong>
+              <span>How Lightning Lane works</span>
+            </div>
+          </button>
+          <button class="ondemand-item" type="button" data-ondemand-tags="wellness" aria-label="Purchasing Individually" data-ondemand-key="purchasing-individually">
+            <div class="ondemand-thumb"><img src="https://upload.wikimedia.org/wikipedia/commons/f/f0/Seven_Dwarfs_Mine_Train.jpg" alt="Purchasing Individually"></div>
+            <div class="ondemand-label">
+              <strong>Purchasing Individually</strong>
+              <span>Individual Lightning Lane selections</span>
+            </div>
+          </button>
+          <button class="ondemand-item" type="button" data-ondemand-tags="wellness" aria-label="Selecting through Disney Genie+ Service" data-ondemand-key="genie-plus-selection">
+            <div class="ondemand-thumb"><img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Disney%27s_Grand_Floridian_Resort_%26_Spa_and_Motor_Launch.jpg" alt="Selecting through Disney Genie+ Service"></div>
+            <div class="ondemand-label">
+              <strong>Selecting through Disney Genie+ Service</strong>
+              <span>Make your next selection</span>
+            </div>
+          </button>
+        </div>
+      </section>
+
+      <section class="screen screen-ondemand-detail" id="ondemandDetailScreen" hidden aria-label="Disney On Demand detail screen">
+        <div class="ondemand-detail-header">
+          <div class="ondemand-detail-titlebar">
+            <svg class="submenu-mickey" viewBox="0 0 647 527" aria-hidden="true">
+              <path d="M 63 44 L 44 63 L 44 72 L 28 87 L 28 96 L 20 103 L 20 128 L 12 135 L 12 152 L 20 159 L 20 184 L 36 199 L 36 208 L 47 219 L 56 219 L 71 235 L 88 235 L 95 243 L 136 243 L 140 247 L 140 272 L 132 279 L 132 360 L 140 367 L 140 384 L 148 391 L 148 408 L 164 423 L 164 432 L 207 475 L 216 475 L 231 491 L 248 491 L 255 499 L 272 499 L 279 507 L 320 507 L 326 515 L 329 515 L 335 507 L 384 507 L 391 499 L 400 499 L 407 491 L 416 491 L 423 483 L 432 483 L 447 467 L 456 467 L 491 432 L 491 423 L 499 416 L 499 407 L 507 400 L 507 391 L 515 384 L 515 367 L 523 360 L 523 279 L 515 272 L 515 247 L 519 243 L 552 243 L 559 235 L 576 235 L 583 227 L 592 227 L 627 192 L 627 175 L 635 168 L 635 119 L 627 112 L 627 95 L 619 88 L 619 79 L 576 36 L 567 36 L 560 28 L 551 28 L 544 20 L 527 20 L 520 12 L 463 12 L 456 20 L 439 20 L 432 28 L 423 28 L 396 55 L 396 64 L 388 71 L 388 104 L 380 110 L 381 114 L 386 116 L 388 121 L 376 132 L 271 132 L 267 128 L 267 79 L 259 72 L 259 63 L 216 20 L 199 20 L 192 12 L 127 12 L 120 20 L 103 20 L 96 28 L 87 28 L 72 44 Z M 267 255 L 271 251 L 288 251 L 295 259 L 304 259 L 311 267 L 320 267 L 327 275 L 336 275 L 343 283 L 352 283 L 359 291 L 368 291 L 375 299 L 384 299 L 404 318 L 404 321 L 384 340 L 375 340 L 368 348 L 359 348 L 352 356 L 343 356 L 336 364 L 327 364 L 320 372 L 311 372 L 304 380 L 295 380 L 288 388 L 271 388 L 267 384 Z" fill="currentColor" fill-rule="evenodd"/>
+            </svg>
+            <span id="ondemandDetailHeaderTitle">DISNEY ON DEMAND</span>
+          </div>
+          <button class="ondemand-back-button" type="button" data-ondemand-detail-back>‹ BACK</button>
+        </div>
+
+        <div class="ondemand-detail-body">
+          <div class="ondemand-detail-art"><img id="ondemandDetailImage" src="" alt="" /></div>
+          <div class="ondemand-detail-copy">
+            <div class="ondemand-detail-category" id="ondemandDetailCategory">DISNEY ON DEMAND</div>
+            <h1 id="ondemandDetailTitle">Title</h1>
+            <p class="ondemand-detail-tagline" id="ondemandDetailTagline"></p>
+            <div class="ondemand-detail-info">
+              <div><span>Category</span><strong id="ondemandDetailCategoryText"></strong></div>
+              <div><span>Perfect For</span><strong id="ondemandDetailPerfectFor"></strong></div>
+            </div>
+            <section class="ondemand-detail-about">
+              <h2>About This Video</h2>
+              <p id="ondemandDetailDescription"></p>
+            </section>
+            <div class="ondemand-detail-actions">
+              <button type="button" class="ondemand-detail-play" id="ondemandDetailPlay">▶ VIDEO</button>
+              <button type="button" class="ondemand-detail-return" data-ondemand-detail-back>BACK TO DISNEY ON DEMAND</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
+
+<section class="screen screen-connect connect-luxe" id="connectScreen" hidden aria-label="Connect My Device">
+  <div class="connect-header">
+    <div class="connect-header-title">
+      <svg class="connect-header-icon" viewBox="0 0 583 455" aria-hidden="true">
+        <path d="M 23 372 L 12 383 L 12 432 L 23 443 L 80 443 L 91 433 L 91 430 L 83 424 L 83 407 L 56 380 L 39 380 L 32 372 Z M 12 287 L 12 312 L 23 323 L 40 323 L 47 331 L 64 331 L 71 339 L 80 339 L 132 391 L 132 408 L 140 415 L 140 440 L 143 443 L 184 443 L 187 440 L 187 399 L 179 392 L 179 375 L 171 368 L 171 359 L 112 300 L 103 300 L 96 292 L 87 292 L 80 284 L 55 284 L 48 276 L 23 276 Z M 12 191 L 12 216 L 23 227 L 56 227 L 63 235 L 88 235 L 95 243 L 104 243 L 111 251 L 120 251 L 127 259 L 136 259 L 143 267 L 152 267 L 204 319 L 204 328 L 220 343 L 220 352 L 228 359 L 228 376 L 236 383 L 236 416 L 244 423 L 244 440 L 247 443 L 288 443 L 291 440 L 291 399 L 283 392 L 283 367 L 275 360 L 275 351 L 267 344 L 267 327 L 251 312 L 251 303 L 243 296 L 243 287 L 192 236 L 183 236 L 168 220 L 159 220 L 152 212 L 143 212 L 136 204 L 127 204 L 120 196 L 103 196 L 96 188 L 71 188 L 64 180 L 23 180 Z M 20 31 L 20 48 L 12 55 L 12 120 L 23 131 L 56 131 L 67 120 L 67 71 L 79 59 L 512 59 L 516 63 L 516 392 L 512 396 L 351 396 L 340 407 L 340 432 L 351 443 L 536 443 L 543 435 L 552 435 L 563 424 L 563 415 L 571 408 L 571 47 L 563 40 L 563 31 L 544 12 L 47 12 L 40 20 L 31 20 Z" fill="currentColor" fill-rule="evenodd"/>
+      </svg>
+      <span>CONNECT MY DEVICE</span>
+    </div>
+    <button class="connect-back-button" type="button" data-connect-back aria-label="Back to Grand Floridian home">‹ BACK</button>
+  </div>
+
+  <div class="connect-body connect-luxe-body">
+    <div class="connect-luxe-main">
+      <section class="connect-showcase" aria-label="Device casting overview">
+        <div class="connect-showcase-copy">
+          <span class="connect-eyebrow">YOUR ROOM • YOUR SCREEN</span>
+          <h2>Bring your favorites<br>to the big screen.</h2>
+          <p>Pair a phone or tablet in seconds, then send photos, videos, audio or a YouTube link directly to your Resort TV.</p>
+        </div>
+
+        <div class="connect-device-visual connect-device-visual-luxe" aria-hidden="true">
+          <div class="connect-tv-device"><div class="connect-screen-image"></div><div class="connect-tv-stand"></div></div>
+          <div class="connect-tablet-device"><div class="connect-screen-image"></div></div>
+          <div class="connect-phone-device"><div class="connect-screen-image"></div></div>
+          <div class="connect-cast-rings"><span></span><span></span><span></span></div>
+        </div>
+
+        <div class="connect-privacy-chip">
+          <span class="connect-privacy-dot"></span>
+          <span>Private browser-to-browser connection</span>
+        </div>
+      </section>
+
+      <section class="connect-pairing-card">
+        <div class="connect-pairing-heading">
+          <div>
+            <span class="connect-eyebrow">PAIR YOUR DEVICE</span>
+            <h2>Scan. Connect. Cast.</h2>
+          </div>
+          <div class="connect-room-badge">ROOM <strong id="connectFooterRoom">----</strong></div>
+        </div>
+
+        <div class="connect-pairing-stage">
+          <div class="connect-qr-frame">
+            <img src="assets/connect-getstreaming-qr.png" alt="Device pairing QR code" class="connect-qr" id="connectPairQr" />
+            <span>SCAN WITH PHONE</span>
+          </div>
+
+          <div class="connect-code-panel connect-code-panel-luxe">
+            <span id="connectRoomCodeLabel">ROOM ---- • SESSION ID</span>
+            <strong id="connectPairCode">CONNECTING…</strong>
+            <small id="connectPairHint">A private session code is created automatically in this browser.</small>
+            <div class="connect-live-status" id="connectLiveStatus"><i></i><span>Preparing secure pairing…</span></div>
+          </div>
+        </div>
+
+        <div class="connect-pair-instructions">
+          <div class="connect-mini-step"><b>1</b><span><strong>Open camera</strong><small>Use your phone or tablet</small></span></div>
+          <div class="connect-mini-step"><b>2</b><span><strong>Scan the QR</strong><small>Your session opens automatically</small></span></div>
+          <div class="connect-mini-step"><b>3</b><span><strong>Choose media</strong><small>Send it to the Resort TV</small></span></div>
+        </div>
+
+        <div class="connect-url" id="connectPhoneUrl"></div>
+        <button class="connect-open-site connect-open-site-luxe" id="connectOpenSite" type="button">OPEN PHONE CONTROLLER</button>
+      </section>
+    </div>
+
+    <div class="connect-footer-strip connect-footer-luxe">
+      <div class="connect-footer-icon" aria-hidden="true">
+        <svg viewBox="0 0 583 455"><path d="M 23 372 L 12 383 L 12 432 L 23 443 L 80 443 L 91 433 L 91 430 L 83 424 L 83 407 L 56 380 L 39 380 L 32 372 Z M 12 287 L 12 312 L 23 323 L 40 323 L 47 331 L 64 331 L 71 339 L 80 339 L 132 391 L 132 408 L 140 415 L 140 440 L 143 443 L 184 443 L 187 440 L 187 399 L 179 392 L 179 375 L 171 368 L 171 359 L 112 300 L 103 300 L 96 292 L 87 292 L 80 284 L 55 284 L 48 276 L 23 276 Z M 12 191 L 12 216 L 23 227 L 56 227 L 63 235 L 88 235 L 95 243 L 104 243 L 111 251 L 120 251 L 127 259 L 136 259 L 143 267 L 152 267 L 204 319 L 204 328 L 220 343 L 220 352 L 228 359 L 228 376 L 236 383 L 236 416 L 244 423 L 244 440 L 247 443 L 288 443 L 291 440 L 291 399 L 283 392 L 283 367 L 275 360 L 275 351 L 267 344 L 267 327 L 251 312 L 251 303 L 243 296 L 243 287 L 192 236 L 183 236 L 168 220 L 159 220 L 152 212 L 143 212 L 136 204 L 127 204 L 120 196 L 103 196 L 96 188 L 71 188 L 64 180 L 23 180 Z M 20 31 L 20 48 L 12 55 L 12 120 L 23 131 L 56 131 L 67 120 L 67 71 L 79 59 L 512 59 L 516 63 L 516 392 L 512 396 L 351 396 L 340 407 L 340 432 L 351 443 L 536 443 L 543 435 L 552 435 L 563 424 L 563 415 L 571 408 L 571 47 L 563 40 L 563 31 L 544 12 L 47 12 L 40 20 L 31 20 Z" fill="currentColor"/></svg>
+      </div>
+      <div class="connect-footer-copy">
+        <strong>Designed for private pairing between your devices.</strong>
+        <span id="connectFooterText">Once published over HTTPS, scanning the QR connects your phone to this exact Resort TV session.</span>
+      </div>
+      <span class="connect-footer-lock">SECURE SESSION</span>
+    </div>
+  </div>
+</section>
+
+
+      <section class="screen screen-hotel-services" id="hotelServicesScreen" hidden aria-label="Hotel Services submenu">
+        <div class="hotel-services-header">
+          <div class="hotel-services-title">
+            <svg class="hotel-services-cloche" viewBox="0 0 575 519" aria-hidden="true">
+              <path d="M 12 431 L 12 456 L 20 463 L 20 472 L 23 475 L 40 475 L 47 483 L 80 483 L 87 491 L 128 491 L 135 499 L 192 499 L 199 507 L 376 507 L 383 499 L 448 499 L 455 491 L 488 491 L 495 483 L 528 483 L 535 475 L 552 475 L 563 464 L 563 423 L 552 412 L 543 412 L 515 384 L 515 375 L 504 364 L 463 364 L 456 372 L 415 372 L 408 380 L 183 380 L 176 372 L 127 372 L 120 364 L 79 364 L 60 383 L 60 392 L 48 404 L 39 404 Z M 68 295 L 68 320 L 79 331 L 88 331 L 95 339 L 120 339 L 127 347 L 160 347 L 167 355 L 240 355 L 247 363 L 320 363 L 327 355 L 408 355 L 415 347 L 456 347 L 463 339 L 488 339 L 495 331 L 504 331 L 507 328 L 507 319 L 516 309 L 515 303 L 507 296 L 507 287 L 491 272 L 491 255 L 483 248 L 483 231 L 475 224 L 475 215 L 440 180 L 431 180 L 424 172 L 407 172 L 400 164 L 327 164 L 315 152 L 315 143 L 339 120 L 339 111 L 347 104 L 347 95 L 339 89 L 339 86 L 347 80 L 347 71 L 351 67 L 360 67 L 371 56 L 371 31 L 352 12 L 319 12 L 316 15 L 316 24 L 293 45 L 287 44 L 256 12 L 231 12 L 212 31 L 212 56 L 236 79 L 236 112 L 244 119 L 244 128 L 268 150 L 268 153 L 256 164 L 175 164 L 168 172 L 159 172 L 152 180 L 143 180 L 136 188 L 127 188 L 116 199 L 116 208 L 100 223 L 100 240 L 92 247 L 92 264 L 84 271 L 84 280 Z" fill="currentColor" fill-rule="evenodd"/>
+            </svg>
+            <span>HOTEL SERVICES</span>
+          </div>
+          <button class="hotel-services-back" type="button" data-hotel-back aria-label="Back to Grand Floridian home">‹ BACK</button>
+        </div>
+
+        <div class="hotel-services-body">
+          <div class="hotel-services-grid hotel-services-grid-top">
+            <button class="hotel-service-tile selected" type="button" data-hotel-section="Dining">
+              <div class="hotel-service-photo"><img src="https://dixiedelightsonline.com/wp-content/uploads/2023/12/20230409070856-scaled.jpg" alt="Grand Floridian Cafe dining room" /></div>
+              <div class="hotel-service-label">
+                <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M16 8v20M10 8v12c0 5 3 8 6 8s6-3 6-8V8M16 28v28M42 8v48M42 8c8 7 10 17 10 25H42" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <span>Dining</span>
+              </div>
+            </button>
+
+            <button class="hotel-service-tile" type="button" data-hotel-section="Pools">
+              <div class="hotel-service-photo"><img src="https://images.squarespace-cdn.com/content/v1/64d1019731f2a4291586bdb5/2176b5d9-e939-4f96-b287-c1506c55837d/232-Blog-Grand-Floridian-Beach-Pool.jpg" alt="Grand Floridian Beach Pool" /></div>
+              <div class="hotel-service-label">
+                <svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="20" fill="none" stroke="currentColor" stroke-width="4"/><circle cx="32" cy="32" r="8" fill="none" stroke="currentColor" stroke-width="4"/><path d="M18 18l9 9M46 18l-9 9M18 46l9-9M46 46l-9-9" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"/></svg>
+                <span>Pools</span>
+              </div>
+            </button>
+
+            <button class="hotel-service-tile" type="button" data-hotel-section="Shops">
+              <div class="hotel-service-photo"><img src="https://flyingoffthebookshelf.com/wp-content/uploads/2025/05/M-Mouse-Mercantile-900x643.jpg" alt="M. Mouse Mercantile at Grand Floridian" /></div>
+              <div class="hotel-service-label">
+                <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M17 24h30l-2 29H19l-2-29Z" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/><path d="M24 25c0-8 3-13 8-13s8 5 8 13" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"/></svg>
+                <span>Shops</span>
+              </div>
+            </button>
+
+            <button class="hotel-service-tile" type="button" data-hotel-section="Activities">
+              <div class="hotel-service-photo"><img src="https://images.squarespace-cdn.com/content/v1/6174eb718b498d5bdd30394e/a5fd84c5-4392-480c-aeac-a8b7ee5d0c65/PXL_20250302_223744912.jpg" alt="Grand Floridian resort activities by the lagoon" /></div>
+              <div class="hotel-service-label">
+                <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M16 48c4-13 9-20 16-20s12 7 16 20M25 25l-5-8M39 25l5-8M21 18l-5-6M43 18l5-6" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"/><circle cx="32" cy="18" r="7" fill="none" stroke="currentColor" stroke-width="4"/></svg>
+                <span>Activities</span>
+              </div>
+            </button>
+          </div>
+
+          <div class="hotel-services-grid hotel-services-grid-bottom">
+            <button class="hotel-service-tile" type="button" data-hotel-section="Spa & Fitness">
+              <div class="hotel-service-photo"><img src="https://dixiedelightsonline.com/wp-content/uploads/2023/11/IMG_5421-scaled.jpg" alt="The Grand Floridian Spa relaxation area" /></div>
+              <div class="hotel-service-label">
+                <svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="41" cy="15" r="5" fill="currentColor"/><path d="M39 23l-9 10 8 7 6-8M30 33l-11 2M38 40l-10 13M45 31l8 8" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <span>Spa &amp; Fitness</span>
+              </div>
+            </button>
+
+            <button class="hotel-service-tile" type="button" data-hotel-section="Transportation">
+              <div class="hotel-service-photo"><img src="https://www.dvcresaleexperts.com/wp-content/uploads/2020/06/Grand-Floridian-1.jpg" alt="Monorail passing Disney's Grand Floridian Resort" /></div>
+              <div class="hotel-service-label">
+                <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M13 13h38v31H13z" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/><path d="M18 20h28v12H18zM20 50h24M22 44l-4 8M42 44l4 8" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <span>Transportation</span>
+              </div>
+            </button>
+
+            <button class="hotel-service-tile" type="button" data-hotel-section="Guest Services">
+              <div class="hotel-service-photo"><img src="https://images.squarespace-cdn.com/content/v1/58520a4e37c58186144df0cf/f562b2fd-c873-4729-81f9-ec82f0c1c4cf/disney-grand-floridian-check-in-2026.jpeg" alt="Grand Floridian front desk and guest services" /></div>
+              <div class="hotel-service-label">
+                <svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="22" fill="none" stroke="currentColor" stroke-width="4"/><path d="M32 28v17M32 19h.01" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round"/></svg>
+                <span>Guest Services</span>
+              </div>
+            </button>
+          </div>
+        </div>
+      </section>
+
+
+
+      <section class="screen screen-dining-directory" id="diningDirectoryScreen" hidden aria-label="Grand Floridian dining directory">
+        <div class="hotel-services-header dining-directory-header">
+          <div class="hotel-services-title">
+            <svg class="dining-header-icon" viewBox="0 0 64 64" aria-hidden="true"><path d="M16 8v20M10 8v12c0 5 3 8 6 8s6-3 6-8V8M16 28v28M42 8v48M42 8c8 7 10 17 10 25H42" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span>DINING</span>
+          </div>
+          <button class="hotel-services-back" type="button" data-dining-back aria-label="Back to Hotel Services">‹ BACK</button>
+        </div>
+
+        <div class="dining-directory-body">
+          <div class="dining-directory-intro">
+            <h1>Dining at Disney's Grand Floridian Resort &amp; Spa</h1>
+            <p>Choose a restaurant or lounge to view a quick resort-TV style overview.</p>
+          </div>
+          <div class="restaurant-grid" id="restaurantGrid"></div>
+        </div>
+      </section>
+
+      <section class="screen screen-restaurant-detail" id="restaurantDetailScreen" hidden aria-label="Restaurant detail screen">
+        <div class="hotel-services-header restaurant-detail-header">
+          <div class="hotel-services-title">
+            <svg class="dining-header-icon" viewBox="0 0 64 64" aria-hidden="true"><path d="M16 8v20M10 8v12c0 5 3 8 6 8s6-3 6-8V8M16 28v28M42 8v48M42 8c8 7 10 17 10 25H42" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span id="restaurantHeaderTitle">DINING</span>
+          </div>
+          <button class="hotel-services-back" type="button" data-restaurant-back aria-label="Back to Dining">‹ BACK</button>
+        </div>
+
+        <div class="restaurant-detail-body">
+          <div class="restaurant-detail-image" id="restaurantDetailImage"><img id="restaurantDetailImg" src="" alt="" /></div>
+          <div class="restaurant-detail-copy">
+            <div class="restaurant-detail-badge" id="restaurantDetailBadge">TABLE SERVICE</div>
+            <h1 id="restaurantDetailName">Restaurant</h1>
+            <p class="restaurant-detail-summary" id="restaurantDetailSummary"></p>
+            <div class="restaurant-detail-info-grid">
+              <div class="restaurant-info-box"><span>Service</span><strong id="restaurantDetailService"></strong></div>
+              <div class="restaurant-info-box"><span>Best For</span><strong id="restaurantDetailBestFor"></strong></div>
+              <div class="restaurant-info-box"><span>Hours</span><strong id="restaurantDetailHours"></strong></div>
+              <div class="restaurant-info-box"><span>Status</span><strong id="restaurantDetailStatus"></strong></div>
+            </div>
+            <div class="restaurant-detail-actions">
+              <button type="button" class="restaurant-back-to-list" data-restaurant-back>BACK TO DINING</button>
+              <a class="restaurant-official-link" href="https://disneyworld.disney.go.com/dining/grand-floridian-resort-and-spa/" target="_blank" rel="noopener">VIEW CURRENT DISNEY DINING DETAILS</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="screen screen-hotel-detail" id="hotelDetailScreen" hidden aria-label="Hotel Services detail screen">
+        <div class="hotel-services-header hotel-detail-header">
+          <div class="hotel-services-title">
+            <svg class="hotel-services-cloche" viewBox="0 0 575 519" aria-hidden="true">
+              <path d="M 12 431 L 12 456 L 20 463 L 20 472 L 23 475 L 40 475 L 47 483 L 80 483 L 87 491 L 128 491 L 135 499 L 192 499 L 199 507 L 376 507 L 383 499 L 448 499 L 455 491 L 488 491 L 495 483 L 528 483 L 535 475 L 552 475 L 563 464 L 563 423 L 552 412 L 543 412 L 515 384 L 515 375 L 504 364 L 463 364 L 456 372 L 415 372 L 408 380 L 183 380 L 176 372 L 127 372 L 120 364 L 79 364 L 60 383 L 60 392 L 48 404 L 39 404 Z M 68 295 L 68 320 L 79 331 L 88 331 L 95 339 L 120 339 L 127 347 L 160 347 L 167 355 L 240 355 L 247 363 L 320 363 L 327 355 L 408 355 L 415 347 L 456 347 L 463 339 L 488 339 L 495 331 L 504 331 L 507 328 L 507 319 L 516 309 L 515 303 L 507 296 L 507 287 L 491 272 L 491 255 L 483 248 L 483 231 L 475 224 L 475 215 L 440 180 L 431 180 L 424 172 L 407 172 L 400 164 L 327 164 L 315 152 L 315 143 L 339 120 L 339 111 L 347 104 L 347 95 L 339 89 L 339 86 L 347 80 L 347 71 L 351 67 L 360 67 L 371 56 L 371 31 L 352 12 L 319 12 L 316 15 L 316 24 L 293 45 L 287 44 L 256 12 L 231 12 L 212 31 L 212 56 L 236 79 L 236 112 L 244 119 L 244 128 L 268 150 L 268 153 L 256 164 L 175 164 L 168 172 L 159 172 L 152 180 L 143 180 L 136 188 L 127 188 L 116 199 L 116 208 L 100 223 L 100 240 L 92 247 L 92 264 L 84 271 L 84 280 Z" fill="currentColor" fill-rule="evenodd"/>
+            </svg>
+            <span id="hotelDetailHeading">DINING</span>
+          </div>
+          <button class="hotel-services-back" type="button" data-hotel-detail-back aria-label="Back to Hotel Services">‹ BACK</button>
+        </div>
+
+        <div class="hotel-detail-body">
+          <div class="hotel-detail-top">
+            <div class="hotel-detail-hero">
+              <img id="hotelDetailHeroImage" src="" alt="" />
+              <div class="hotel-detail-hero-overlay">
+                <div class="hotel-detail-kicker">DISNEY'S GRAND FLORIDIAN RESORT &amp; SPA</div>
+                <h1 id="hotelDetailTitle">Dining</h1>
+                <p id="hotelDetailDescription">Explore this hotel service.</p>
+              </div>
+            </div>
+            <aside class="hotel-detail-glance">
+              <h2>At a Glance</h2>
+              <ul id="hotelDetailGlance"></ul>
+            </aside>
+          </div>
+
+          <div class="hotel-detail-bottom">
+            <section class="hotel-detail-card hotel-detail-highlights">
+              <h2>Highlights</h2>
+              <div class="hotel-detail-highlight-grid" id="hotelDetailHighlights"></div>
+            </section>
+
+            <section class="hotel-detail-card hotel-detail-note-card">
+              <h2 id="hotelDetailNoteTitle">Helpful Tip</h2>
+              <p id="hotelDetailNote"></p>
+            </section>
+          </div>
+        </div>
+      </section>
+
+      <section class="screen screen-disney-app" id="disneyAppScreen" hidden aria-label="Disney Plus welcome screen">
+        <div class="dplus-app-bg" aria-hidden="true">
+          <div class="dplus-bg-tile tile-a"><img src="https://disney.images.edge.bamgrid.com/ripcut-delivery/v2/variant/disney/20f65367-4cc2-44f5-abb3-b61ccb860eb1/compose?format=webp&width=2560" alt="" /></div>
+          <div class="dplus-bg-tile tile-b"><img src="https://disney.images.edge.bamgrid.com/ripcut-delivery/v2/variant/disney/06530686-7497-4942-b6d3-c20c28cb739c/compose?format=webp&width=2560" alt="" /></div>
+          <div class="dplus-bg-tile tile-c"><img src="https://disney.images.edge.bamgrid.com/ripcut-delivery/v2/variant/disney/0db28094-7f79-49ca-882c-26af0838fa8a/compose?format=webp&width=2560" alt="" /></div>
+        </div>
+        <div class="dplus-app-overlay"></div>
+
+        <div class="dplus-promo-copy">
+          <div class="dplus-service-logos" aria-label="Hulu Disney Plus ESPN">
+            <span class="hulu-word">hulu</span>
+            <span class="disney-word">Disney+</span>
+            <span class="espn-word">ESPN+</span>
+          </div>
+          <h1>Choose your bundle for the<br />best of Disney+, Hulu, and<br />ESPN+</h1>
+          <button class="dplus-primary" id="bundleButton" type="button">BUNDLE &amp; SAVE</button>
+          <p class="dplus-legal">18+ only. Access content from each service separately. Offer availability and terms vary by region.</p>
+          <button class="dplus-login-button" id="disneyLoginButton" type="button">LOG IN</button>
+        </div>
+
+        <div class="dplus-promo-art" aria-hidden="true">
+          <div class="promo-poster poster-apes"><img src="https://disney.images.edge.bamgrid.com/ripcut-delivery/v2/variant/disney/0db28094-7f79-49ca-882c-26af0838fa8a/compose?format=webp&width=2560" alt="" /></div>
+          <div class="promo-poster poster-deadpool"><img src="https://disney.images.edge.bamgrid.com/ripcut-delivery/v2/variant/disney/20f65367-4cc2-44f5-abb3-b61ccb860eb1/compose?format=webp&width=2560" alt="" /></div>
+          <div class="promo-poster poster-inside"><img src="https://disney.images.edge.bamgrid.com/ripcut-delivery/v2/variant/disney/06530686-7497-4942-b6d3-c20c28cb739c/compose?format=webp&width=2560" alt="" /></div>
+          <div class="promo-poster poster-alien"><img src="https://disney.images.edge.bamgrid.com/ripcut-delivery/v2/variant/disney/d205505e-2a8c-4f3a-bd0a-b25347660904/compose?format=webp&width=2560" alt="" /></div>
+        </div>
+
+        <button class="dplus-back-button" type="button" data-disney-back aria-label="Back to Disney Plus and On Demand">‹ BACK</button>
+      </section>
+
+      <section class="screen screen-disney-login" id="disneyLoginScreen" hidden aria-label="MyDisney login handoff screen">
+        <div class="login-blue-glow"></div>
+        <div class="login-panel">
+          <div class="mydisney-mark">My<span>Disney</span></div>
+          <h1>Log in or create an account</h1>
+          <p class="login-step"><strong>Step 1:</strong> Scan the QR code to open the official Disney+ sign-in page on your phone, or use the address below.</p>
+
+          <div class="login-qr-row">
+            <a class="qr-card" href="https://www.disneyplus.com/login" target="_blank" rel="noopener" aria-label="Open the official Disney Plus login page">
+              <img src="assets/disneyplus-login-qr.png" alt="QR code for the official Disney Plus login page" />
+            </a>
+            <a class="begin-url" href="https://www.disneyplus.com/login" target="_blank" rel="noopener">disneyplus.com/login</a>
+          </div>
+
+          <p class="login-step login-step-two"><strong>Step 2:</strong> Sign in with your MyDisney account on the official Disney+ page. This custom Resort TV interface cannot receive a TV activation token, so playback continues through Disney+ itself.</p>
+
+          <div class="login-actions login-actions-primary">
+            <a class="official-login-link" href="https://www.disneyplus.com/login" target="_blank" rel="noopener">OPEN DISNEY+</a>
+            <button class="login-back" type="button" data-login-back>BACK</button>
+          </div>
+        </div>
+
+        <div class="login-brand-side">
+          <div class="dplus-large-wordmark">Disney+</div>
+          <div class="login-official-note">Secure sign-in opens on the official Disney+ website; no activation code is required for this handoff.</div>
+        </div>
+      </section>
+
+
+      <section class="screen screen-parks-more" id="parksMoreScreen" hidden aria-label="Parks and More submenu">
+        <div class="parks-more-header">
+          <div class="parks-more-title">
+            <svg class="parks-more-castle" viewBox="0 0 464 527" aria-hidden="true">
+              <path d="M 420 263 L 419 268 L 423 275 L 448 275 L 452 268 L 448 260 L 439 260 L 433 252 L 430 252 Z M 36 262 L 36 265 L 47 275 L 64 275 L 67 272 L 67 263 L 64 260 L 55 260 L 49 252 L 46 252 Z M 290 61 L 286 60 L 284 62 L 284 72 L 276 79 L 276 96 L 268 103 L 268 128 L 260 135 L 260 200 L 268 207 L 268 240 L 264 244 L 255 244 L 251 240 L 251 223 L 243 216 L 243 207 L 232 196 L 215 196 L 204 207 L 204 216 L 196 223 L 196 240 L 185 252 L 182 252 L 169 236 L 166 236 L 156 247 L 156 264 L 148 271 L 148 288 L 156 295 L 156 328 L 152 332 L 143 332 L 139 328 L 139 311 L 131 304 L 131 295 L 120 284 L 115 283 L 108 287 L 108 296 L 100 303 L 100 320 L 91 330 L 92 336 L 100 343 L 100 360 L 92 367 L 92 376 L 88 380 L 71 380 L 67 376 L 67 351 L 59 344 L 59 327 L 51 320 L 51 311 L 40 300 L 36 302 L 36 312 L 28 319 L 28 336 L 20 343 L 20 376 L 12 383 L 12 408 L 20 415 L 20 480 L 12 487 L 12 504 L 23 515 L 184 515 L 195 504 L 195 471 L 223 443 L 248 443 L 268 463 L 268 472 L 276 479 L 276 512 L 279 515 L 440 515 L 451 504 L 451 455 L 443 448 L 443 423 L 451 416 L 451 375 L 443 368 L 443 335 L 435 328 L 435 319 L 427 312 L 427 302 L 425 300 L 421 301 L 412 311 L 412 328 L 404 335 L 404 352 L 396 359 L 397 375 L 393 380 L 389 379 L 379 368 L 379 327 L 387 320 L 387 295 L 379 288 L 379 263 L 371 256 L 371 231 L 368 228 L 363 227 L 356 231 L 356 248 L 348 255 L 348 280 L 340 287 L 340 304 L 336 308 L 319 308 L 315 304 L 315 199 L 323 192 L 323 175 L 315 168 L 315 119 L 307 112 L 307 87 L 299 80 L 299 71 Z M 284 22 L 284 25 L 298 36 L 304 35 L 311 27 L 319 28 L 323 25 L 322 21 L 312 12 L 295 12 Z" fill="currentColor" fill-rule="evenodd"/>
+            </svg>
+            <span>PARKS &amp; MORE</span>
+          </div>
+          <button class="parks-more-back" type="button" data-parks-back aria-label="Back to Grand Floridian home">‹ BACK</button>
+        </div>
+
+        <div class="parks-more-body">
+          <div class="parks-major-grid">
+            <button class="park-card selected" type="button" data-park-name="Magic Kingdom" data-park-key="magic-kingdom">
+              <div class="park-card-photo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Cinderella_Castle%2C_Magic_Kingdom_%282026%29_%28square_crop%29.jpg/1280px-Cinderella_Castle%2C_Magic_Kingdom_%282026%29_%28square_crop%29.jpg" alt="Cinderella Castle at Magic Kingdom"></div>
+              <div class="park-card-info"><strong>Magic Kingdom</strong><span>VIEW TODAY'S HOURS</span></div>
+            </button>
+            <button class="park-card" type="button" data-park-name="EPCOT" data-park-key="epcot">
+              <div class="park-card-photo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Spaceship_Earth%2C_EPCOT.jpg/1280px-Spaceship_Earth%2C_EPCOT.jpg" alt="Spaceship Earth at EPCOT"></div>
+              <div class="park-card-info"><strong>EPCOT</strong><span>VIEW TODAY'S HOURS</span></div>
+            </button>
+            <button class="park-card" type="button" data-park-name="Disney's Hollywood Studios" data-park-key="hollywood-studios">
+              <div class="park-card-photo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/The_Twilight_Zone_Tower_of_Terror%2C_2024.jpg/1280px-The_Twilight_Zone_Tower_of_Terror%2C_2024.jpg" alt="Tower of Terror at Disney's Hollywood Studios"></div>
+              <div class="park-card-info"><strong>Disney's Hollywood Studios</strong><span>VIEW TODAY'S HOURS</span></div>
+            </button>
+            <button class="park-card" type="button" data-park-name="Disney's Animal Kingdom" data-park-key="animal-kingdom">
+              <div class="park-card-photo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Tree_of_Life%2C_Disney%27s_Animal_Kingdom.jpg/1280px-Tree_of_Life%2C_Disney%27s_Animal_Kingdom.jpg" alt="Tree of Life at Disney's Animal Kingdom"></div>
+              <div class="park-card-info"><strong>Disney's Animal Kingdom</strong><span>VIEW TODAY'S HOURS</span></div>
+            </button>
+          </div>
+
+          <div class="parks-secondary-grid">
+            <button class="park-mini-card" type="button" data-park-name="Disney's Typhoon Lagoon" data-park-key="typhoon-lagoon">
+              <div class="park-mini-photo"><img src="https://upload.wikimedia.org/wikipedia/commons/0/0b/WDW_Typhoon_Lagoon_Surf_Pool.JPG" alt="Disney's Typhoon Lagoon"></div>
+              <div class="park-mini-copy"><strong>Disney's Typhoon Lagoon</strong><span>VIEW TODAY'S HOURS</span></div>
+            </button>
+            <button class="park-mini-card" type="button" data-park-name="Disney's Blizzard Beach" data-park-key="blizzard-beach">
+              <div class="park-mini-photo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Blizzard_Beach_Aerial_photo_%287426584544%29.jpg/1280px-Blizzard_Beach_Aerial_photo_%287426584544%29.jpg" alt="Disney's Blizzard Beach"></div>
+              <div class="park-mini-copy"><strong>Disney's Blizzard Beach</strong><span>VIEW TODAY'S HOURS</span></div>
+            </button>
+            <button class="park-mini-card" type="button" data-park-name="Disney Springs" data-park-key="disney-springs">
+              <div class="park-mini-photo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Disney_Springs_Water_Tower_%2827690393234%29.jpg/1280px-Disney_Springs_Water_Tower_%2827690393234%29.jpg" alt="Disney Springs"></div>
+              <div class="park-mini-copy"><strong>Disney Springs</strong><span>VIEW TODAY'S HOURS</span></div>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="screen screen-park-detail" id="parkDetailScreen" hidden aria-label="Park detail submenu">
+    <div class="park-detail-header">
+      <div class="park-detail-header-title">
+        <svg class="parks-more-castle" viewBox="0 0 464 527" aria-hidden="true">
+          <path d="M 420 263 L 419 268 L 423 275 L 448 275 L 452 268 L 448 260 L 439 260 L 433 252 L 430 252 Z M 36 262 L 36 265 L 47 275 L 64 275 L 67 272 L 67 263 L 64 260 L 55 260 L 49 252 L 46 252 Z M 290 61 L 286 60 L 284 62 L 284 72 L 276 79 L 276 96 L 268 103 L 268 128 L 260 135 L 260 200 L 268 207 L 268 240 L 264 244 L 255 244 L 251 240 L 251 223 L 243 216 L 243 207 L 232 196 L 215 196 L 204 207 L 204 216 L 196 223 L 196 240 L 185 252 L 182 252 L 169 236 L 166 236 L 156 247 L 156 264 L 148 271 L 148 288 L 156 295 L 156 328 L 152 332 L 143 332 L 139 328 L 139 311 L 131 304 L 131 295 L 120 284 L 115 283 L 108 287 L 108 296 L 100 303 L 100 320 L 91 330 L 92 336 L 100 343 L 100 360 L 92 367 L 92 376 L 88 380 L 71 380 L 67 376 L 67 351 L 59 344 L 59 327 L 51 320 L 51 311 L 40 300 L 36 302 L 36 312 L 28 319 L 28 336 L 20 343 L 20 376 L 12 383 L 12 408 L 20 415 L 20 480 L 12 487 L 12 504 L 23 515 L 184 515 L 195 504 L 195 471 L 223 443 L 248 443 L 268 463 L 268 472 L 276 479 L 276 512 L 279 515 L 440 515 L 451 504 L 451 455 L 443 448 L 443 423 L 451 416 L 451 375 L 443 368 L 443 335 L 435 328 L 435 319 L 427 312 L 427 302 L 425 300 L 421 301 L 412 311 L 412 328 L 404 335 L 404 352 L 396 359 L 397 375 L 393 380 L 389 379 L 379 368 L 379 327 L 387 320 L 387 295 L 379 288 L 379 263 L 371 256 L 371 231 L 368 228 L 363 227 L 356 231 L 356 248 L 348 255 L 348 280 L 340 287 L 340 304 L 336 308 L 319 308 L 315 304 L 315 199 L 323 192 L 323 175 L 315 168 L 315 119 L 307 112 L 307 87 L 299 80 L 299 71 Z M 284 22 L 284 25 L 298 36 L 304 35 L 311 27 L 319 28 L 323 25 L 322 21 L 312 12 L 295 12 Z" fill="currentColor" fill-rule="evenodd"/>
+        </svg>
+        <span id="parkDetailHeaderTitle">MAGIC KINGDOM</span>
+      </div>
+      <button class="parks-more-back" type="button" data-park-detail-back aria-label="Back to Parks and More">‹ BACK</button>
+    </div>
+    <div class="park-detail-body">
+      <div class="park-detail-hero-card"><img id="parkDetailHeroImage" src="" alt="" /></div>
+      <div class="park-detail-copy">
+        <span class="park-detail-badge" id="parkDetailBadge">THEME PARK</span>
+        <h2 id="parkDetailTitle">Magic Kingdom</h2>
+        <p class="park-detail-summary" id="parkDetailSummary"></p>
+        <div class="park-hours-band">
+          <div class="park-hours-main"><span>TODAY'S HOURS</span><strong id="parkDetailHours"></strong></div>
+          <div class="park-hours-extra"><span id="parkDetailHoursExtra"></span></div>
+        </div>
+        <div class="park-detail-info-grid">
+          <article class="park-detail-info-box"><span class="info-label">Best For</span><strong id="parkDetailBestFor"></strong></article>
+          <article class="park-detail-info-box"><span class="info-label">Signature</span><strong id="parkDetailSignature"></strong></article>
+          <article class="park-detail-info-box"><span class="info-label">Highlights</span><strong id="parkDetailHighlights"></strong></article>
+          <article class="park-detail-info-box"><span class="info-label">Location</span><strong id="parkDetailLocation"></strong></article>
+        </div>
+        <div class="park-detail-subcards" id="parkDetailSubcards"></div>
+        <div class="park-detail-actions">
+          <button class="park-action-secondary" type="button" data-park-detail-back>BACK TO PARKS &amp; MORE</button>
+          <button class="park-action-primary" type="button" id="parkDetailOfficialButton">OPEN OFFICIAL PAGE</button>
+        </div>
+      </div>
+    </div>
+  </section>
+</section>
+
+
+    <nav class="bottom-menu" aria-label="Resort television menu">
+      <button class="menu-item active" data-panel="Watch TV" data-screen-target="home" type="button">
+        <svg class="menu-svg tv-svg" viewBox="0 0 80 62" aria-hidden="true">
+          <rect x="9" y="7" width="59" height="39" rx="3" fill="currentColor"/>
+          <rect x="28" y="51" width="22" height="4" rx="2" fill="currentColor"/>
+        </svg>
+        <span class="menu-label"><strong>WATCH</strong><br />TV</span>
+      </button>
+
+      <button class="menu-item" data-panel="Disney+ & On Demand" data-screen-target="disney" type="button">
+        <svg class="menu-svg disney-svg" viewBox="0 0 647 527" aria-hidden="true">
+          <path d="M 63 44 L 44 63 L 44 72 L 28 87 L 28 96 L 20 103 L 20 128 L 12 135 L 12 152 L 20 159 L 20 184 L 36 199 L 36 208 L 47 219 L 56 219 L 71 235 L 88 235 L 95 243 L 136 243 L 140 247 L 140 272 L 132 279 L 132 360 L 140 367 L 140 384 L 148 391 L 148 408 L 164 423 L 164 432 L 207 475 L 216 475 L 231 491 L 248 491 L 255 499 L 272 499 L 279 507 L 320 507 L 326 515 L 329 515 L 335 507 L 384 507 L 391 499 L 400 499 L 407 491 L 416 491 L 423 483 L 432 483 L 447 467 L 456 467 L 491 432 L 491 423 L 499 416 L 499 407 L 507 400 L 507 391 L 515 384 L 515 367 L 523 360 L 523 279 L 515 272 L 515 247 L 519 243 L 552 243 L 559 235 L 576 235 L 583 227 L 592 227 L 627 192 L 627 175 L 635 168 L 635 119 L 627 112 L 627 95 L 619 88 L 619 79 L 576 36 L 567 36 L 560 28 L 551 28 L 544 20 L 527 20 L 520 12 L 463 12 L 456 20 L 439 20 L 432 28 L 423 28 L 396 55 L 396 64 L 388 71 L 388 104 L 380 110 L 381 114 L 386 116 L 388 121 L 376 132 L 271 132 L 267 128 L 267 79 L 259 72 L 259 63 L 216 20 L 199 20 L 192 12 L 127 12 L 120 20 L 103 20 L 96 28 L 87 28 L 72 44 Z M 267 255 L 271 251 L 288 251 L 295 259 L 304 259 L 311 267 L 320 267 L 327 275 L 336 275 L 343 283 L 352 283 L 359 291 L 368 291 L 375 299 L 384 299 L 404 318 L 404 321 L 384 340 L 375 340 L 368 348 L 359 348 L 352 356 L 343 356 L 336 364 L 327 364 L 320 372 L 311 372 L 304 380 L 295 380 L 288 388 L 271 388 L 267 384 Z" fill="currentColor" fill-rule="evenodd"/>
+        </svg>
+        <span class="menu-label"><strong>DISNEY+ &amp;</strong><br />ON DEMAND</span>
+      </button>
+
+      <button class="menu-item" data-panel="Connect My Device" data-screen-target="connect" type="button">
+        <svg class="menu-svg connect-svg" viewBox="0 0 583 455" aria-hidden="true">
+          <path d="M 23 372 L 12 383 L 12 432 L 23 443 L 80 443 L 91 433 L 91 430 L 83 424 L 83 407 L 56 380 L 39 380 L 32 372 Z M 12 287 L 12 312 L 23 323 L 40 323 L 47 331 L 64 331 L 71 339 L 80 339 L 132 391 L 132 408 L 140 415 L 140 440 L 143 443 L 184 443 L 187 440 L 187 399 L 179 392 L 179 375 L 171 368 L 171 359 L 112 300 L 103 300 L 96 292 L 87 292 L 80 284 L 55 284 L 48 276 L 23 276 Z M 12 191 L 12 216 L 23 227 L 56 227 L 63 235 L 88 235 L 95 243 L 104 243 L 111 251 L 120 251 L 127 259 L 136 259 L 143 267 L 152 267 L 204 319 L 204 328 L 220 343 L 220 352 L 228 359 L 228 376 L 236 383 L 236 416 L 244 423 L 244 440 L 247 443 L 288 443 L 291 440 L 291 399 L 283 392 L 283 367 L 275 360 L 275 351 L 267 344 L 267 327 L 251 312 L 251 303 L 243 296 L 243 287 L 192 236 L 183 236 L 168 220 L 159 220 L 152 212 L 143 212 L 136 204 L 127 204 L 120 196 L 103 196 L 96 188 L 71 188 L 64 180 L 23 180 Z M 20 31 L 20 48 L 12 55 L 12 120 L 23 131 L 56 131 L 67 120 L 67 71 L 79 59 L 512 59 L 516 63 L 516 392 L 512 396 L 351 396 L 340 407 L 340 432 L 351 443 L 536 443 L 543 435 L 552 435 L 563 424 L 563 415 L 571 408 L 571 47 L 563 40 L 563 31 L 544 12 L 47 12 L 40 20 L 31 20 Z" fill="currentColor" fill-rule="evenodd"/>
+        </svg>
+        <span class="menu-label"><strong>CONNECT</strong><br />MY DEVICE</span>
+      </button>
+
+      <button class="menu-item" data-panel="Hotel Services" data-screen-target="hotel" type="button">
+        <svg class="menu-svg hotel-svg" viewBox="0 0 575 519" aria-hidden="true">
+          <path d="M 12 431 L 12 456 L 20 463 L 20 472 L 23 475 L 40 475 L 47 483 L 80 483 L 87 491 L 128 491 L 135 499 L 192 499 L 199 507 L 376 507 L 383 499 L 448 499 L 455 491 L 488 491 L 495 483 L 528 483 L 535 475 L 552 475 L 563 464 L 563 423 L 552 412 L 543 412 L 515 384 L 515 375 L 504 364 L 463 364 L 456 372 L 415 372 L 408 380 L 183 380 L 176 372 L 127 372 L 120 364 L 79 364 L 60 383 L 60 392 L 48 404 L 39 404 Z M 68 295 L 68 320 L 79 331 L 88 331 L 95 339 L 120 339 L 127 347 L 160 347 L 167 355 L 240 355 L 247 363 L 320 363 L 327 355 L 408 355 L 415 347 L 456 347 L 463 339 L 488 339 L 495 331 L 504 331 L 507 328 L 507 319 L 516 309 L 515 303 L 507 296 L 507 287 L 491 272 L 491 255 L 483 248 L 483 231 L 475 224 L 475 215 L 440 180 L 431 180 L 424 172 L 407 172 L 400 164 L 327 164 L 315 152 L 315 143 L 339 120 L 339 111 L 347 104 L 347 95 L 339 89 L 339 86 L 347 80 L 347 71 L 351 67 L 360 67 L 371 56 L 371 31 L 352 12 L 319 12 L 316 15 L 316 24 L 293 45 L 287 44 L 256 12 L 231 12 L 212 31 L 212 56 L 236 79 L 236 112 L 244 119 L 244 128 L 268 150 L 268 153 L 256 164 L 175 164 L 168 172 L 159 172 L 152 180 L 143 180 L 136 188 L 127 188 L 116 199 L 116 208 L 100 223 L 100 240 L 92 247 L 92 264 L 84 271 L 84 280 Z" fill="currentColor" fill-rule="evenodd"/>
+        </svg>
+        <span class="menu-label"><strong>HOTEL</strong><br />SERVICES</span>
+      </button>
+
+      <button class="menu-item" data-panel="Parks & More" data-screen-target="parks" type="button">
+        <svg class="menu-svg parks-svg" viewBox="0 0 464 527" aria-hidden="true">
+          <path d="M 420 263 L 419 268 L 423 275 L 448 275 L 452 268 L 448 260 L 439 260 L 433 252 L 430 252 Z M 36 262 L 36 265 L 47 275 L 64 275 L 67 272 L 67 263 L 64 260 L 55 260 L 49 252 L 46 252 Z M 290 61 L 286 60 L 284 62 L 284 72 L 276 79 L 276 96 L 268 103 L 268 128 L 260 135 L 260 200 L 268 207 L 268 240 L 264 244 L 255 244 L 251 240 L 251 223 L 243 216 L 243 207 L 232 196 L 215 196 L 204 207 L 204 216 L 196 223 L 196 240 L 185 252 L 182 252 L 169 236 L 166 236 L 156 247 L 156 264 L 148 271 L 148 288 L 156 295 L 156 328 L 152 332 L 143 332 L 139 328 L 139 311 L 131 304 L 131 295 L 120 284 L 115 283 L 108 287 L 108 296 L 100 303 L 100 320 L 91 330 L 92 336 L 100 343 L 100 360 L 92 367 L 92 376 L 88 380 L 71 380 L 67 376 L 67 351 L 59 344 L 59 327 L 51 320 L 51 311 L 40 300 L 36 302 L 36 312 L 28 319 L 28 336 L 20 343 L 20 376 L 12 383 L 12 408 L 20 415 L 20 480 L 12 487 L 12 504 L 23 515 L 184 515 L 195 504 L 195 471 L 223 443 L 248 443 L 268 463 L 268 472 L 276 479 L 276 512 L 279 515 L 440 515 L 451 504 L 451 455 L 443 448 L 443 423 L 451 416 L 451 375 L 443 368 L 443 335 L 435 328 L 435 319 L 427 312 L 427 302 L 425 300 L 421 301 L 412 311 L 412 328 L 404 335 L 404 352 L 396 359 L 397 375 L 393 380 L 389 379 L 379 368 L 379 327 L 387 320 L 387 295 L 379 288 L 379 263 L 371 256 L 371 231 L 368 228 L 363 227 L 356 231 L 356 248 L 348 255 L 348 280 L 340 287 L 340 304 L 336 308 L 319 308 L 315 304 L 315 199 L 323 192 L 323 175 L 315 168 L 315 119 L 307 112 L 307 87 L 299 80 L 299 71 Z M 284 22 L 284 25 L 298 36 L 304 35 L 311 27 L 319 28 L 323 25 L 322 21 L 312 12 L 295 12 Z" fill="currentColor" fill-rule="evenodd"/>
+        </svg>
+        <span class="menu-label"><strong>PARKS</strong><br />&amp; MORE</span>
+      </button>
+    </nav>
+
+    <div class="menu-toast" id="menuToast" aria-live="polite"></div>
+    <button class="fullscreen-button" id="fullscreenButton" type="button" aria-label="Enter fullscreen">⛶</button>
+
+
+<div class="cast-receiver" id="castReceiver" hidden>
+  <div class="cast-receiver-topbar">
+    <div><span class="cast-dot"></span><strong id="castReceiverDevice">CONNECTED DEVICE</strong><small id="castReceiverRoom"> • ROOM ----</small></div>
+    <button type="button" id="castReceiverClose">RETURN TO RESORT TV</button>
+  </div>
+  <div class="cast-receiver-stage" id="castReceiverStage">
+    <img id="castReceiverImage" alt="Shared media" hidden />
+    <video id="castReceiverVideo" playsinline controls hidden></video>
+    <audio id="castReceiverAudio" controls hidden></audio>
+    <iframe id="castReceiverYoutube" title="YouTube shared from device" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen hidden></iframe>
+    <div class="cast-message" id="castReceiverMessage" hidden></div>
+  </div>
+  <div class="cast-receiver-title" id="castReceiverTitle"></div>
+</div>
+
+    <audio id="backgroundMusic" loop preload="auto" autoplay playsinline>
+      <source src="assets/background-music-seamless.opus" type="audio/ogg; codecs=opus" />
+    </audio>
+
+
+<div class="guest-setup-overlay" id="guestSetupOverlay" hidden>
+  <section class="guest-setup-card" role="dialog" aria-modal="true" aria-labelledby="guestSetupTitle">
+    <div class="guest-setup-kicker">DISNEY'S GRAND FLORIDIAN RESORT &amp; SPA</div>
+    <div class="guest-setup-icon" aria-hidden="true">✦</div>
+    <h1 id="guestSetupTitle">Welcome Home</h1>
+    <p>What name should appear on your Resort TV?</p>
+    <label class="guest-setup-field">
+      <span>Guest or family name</span>
+      <input id="guestNameInput" type="text" maxlength="42" autocomplete="name" placeholder="GUEST NAME" />
+    </label>
+    <div class="guest-setup-preview">
+      <span>WELCOME HOME</span>
+      <strong id="guestNamePreview">Your Family Name</strong>
+    </div>
+    <button class="guest-setup-continue" id="guestSetupContinue" type="button">CONTINUE TO RESORT TV</button>
+    <p class="guest-setup-note">Saved only in this browser. You can change it anytime from the home screen.</p>
+  </section>
+</div>
+
+  </main>
+
+  <script src="assets/qrcode-browser.js"></script>
+  <script src="https://unpkg.com/peerjs@1.5.5/dist/peerjs.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

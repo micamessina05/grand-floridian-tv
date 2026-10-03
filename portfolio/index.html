@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Micaela Messina — Portfolio</title>
+<style>
+:root{--ink:#161616;--red:#ff5d3d;--yellow:#ffe05a;--blue:#4b86ff;--sky:#97d8ff;--purple:#8b65f6;--pink:#ff76b7;--green:#bfd6b4;--paper:#f4e6c8}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:radial-gradient(circle at 10% 12%,#ffe05a77,transparent 18%),radial-gradient(circle at 88% 18%,#97d8ff77,transparent 20%),linear-gradient(180deg,#f7f0e6,#eef6ff);overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.13;background-image:linear-gradient(transparent 96%,#0002 96%),linear-gradient(90deg,transparent 96%,#0001 96%);background-size:16px 16px}
+.wrap{width:min(1160px,calc(100% - 24px));margin:auto;padding:18px 0 54px}
+.top{position:sticky;top:8px;z-index:9;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:center;padding:12px 16px;border:2px solid #0002;border-radius:20px;background:#ffffffb8;backdrop-filter:blur(10px);box-shadow:0 12px 28px #0002}
+.logo{font-weight:900;letter-spacing:.08em;line-height:.95}.logo span{color:var(--purple)}nav{display:flex;gap:8px;flex-wrap:wrap}nav a,.chip,.contact a{color:var(--ink);text-decoration:none;border:2px solid #0002;background:#fff;border-radius:999px;padding:9px 13px;font-weight:800;font-size:13px}
+.hero{position:relative;overflow:hidden;margin-top:18px;border:3px solid #0002;border-radius:32px;box-shadow:0 16px 35px #0002;background:linear-gradient(125deg,#1567ef 0 20%,#fedb45 20% 38%,#e95532 38% 57%,#f5ecdf 57%);padding:30px 20px 22px;min-height:440px}
+.burst{position:absolute;left:22px;top:22px;width:180px;height:180px;background:var(--red);clip-path:polygon(50% 0,61% 18%,78% 4%,74% 24%,96% 18%,82% 38%,100% 50%,82% 62%,96% 82%,74% 76%,78% 96%,61% 82%,50% 100%,39% 82%,22% 96%,26% 76%,4% 82%,18% 62%,0 50%,18% 38%,4% 18%,26% 24%,22% 4%,39% 18%)}
+.sun{position:absolute;right:105px;top:24px;width:155px;height:155px;border-radius:50%;background:var(--yellow)}
+.paper{position:relative;z-index:2;margin-top:86px;margin-left:18px;width:min(100%,690px);background:var(--paper);border:2px solid #0002;border-radius:14px;padding:20px;box-shadow:0 9px 0 #0001}
+.tape{position:absolute;right:20px;top:-9px;width:58px;height:19px;background:#fff0b8cc;transform:rotate(-5deg);border:1px solid #0001}
+.title{display:flex;flex-wrap:wrap;gap:7px;margin:0 0 16px;font-size:clamp(38px,8vw,72px);line-height:.9;font-weight:900}
+.title span{display:grid;place-items:center;min-width:50px;padding:6px 9px;border-radius:8px;box-shadow:0 4px 0 #0002}.a{background:#283772;color:#fff}.b{background:#ffe5b5}.c{background:#ef4b35;color:#fff}.d{background:#fac8d3}.e{background:#eff2fd}.f{background:#4c83ef;color:#fff}.g{background:#d8e6ff}.h{background:#1c2b69;color:#fff}.i{background:#bcd2f0}
+.paper p{font-size:16px;line-height:1.6}.mini{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}.stack{position:absolute;right:16px;top:72px;width:min(36vw,250px);display:grid;gap:9px;z-index:3}.pill{padding:13px 16px;border-radius:999px;font-weight:900;text-align:center;border:2px solid #0001;box-shadow:0 5px 0 #0001}.p1{background:var(--purple);color:white;transform:rotate(-2deg)}.p2{background:#b78b3b;color:#fff;width:88%;margin-left:auto}.p3{background:#c6d5b6;width:94%;transform:rotate(-3deg)}
+.section{margin-top:20px}.grid{display:grid;grid-template-columns:1.05fr .95fr;gap:18px}.card{position:relative;background:#ffffffcf;border:2px solid #0002;border-radius:26px;box-shadow:0 14px 30px #0002;padding:21px;overflow:hidden}.card h2,.card h3{margin:0 0 10px;line-height:1}.card h2{font-size:clamp(28px,4vw,42px)}.label{display:inline-block;margin-bottom:10px;font-size:12px;letter-spacing:.14em;font-weight:900}.card p{line-height:1.6}.note{display:inline-block;margin-top:10px;padding:13px 15px;border-radius:16px;background:var(--yellow);border:2px solid #0002;box-shadow:0 5px 0 #0001;font-weight:800;transform:rotate(-2deg)}
+.icons{display:grid;grid-template-columns:1fr 1fr;gap:11px}.icons div{min-height:94px;display:flex;flex-direction:column;justify-content:space-between;padding:15px;border:2px solid #0002;border-radius:17px;background:white;font-weight:800}.icons b{font-size:28px}
+.projects{display:grid;gap:13px}.proj{background:linear-gradient(160deg,#fff,#f0f8ff);padding:18px}.projtop{display:flex;justify-content:space-between;gap:12px}.num{min-width:48px;height:48px;border-radius:50%;display:grid;place-items:center;background:var(--red);color:white;font-weight:900}.proj:nth-child(2) .num{background:var(--blue)}.proj:nth-child(3) .num{background:var(--purple)}.proj:nth-child(4) .num{background:#6eb25f}.tags{display:flex;gap:7px;flex-wrap:wrap}.tags span{padding:7px 11px;border-radius:999px;background:#fff;border:2px solid #0001;font-size:12px;font-weight:800}
+.films{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.film{background:#111;border-radius:17px;padding:9px;position:relative}.film:before,.film:after{content:"";position:absolute;left:7px;right:7px;height:7px;background-image:radial-gradient(circle,#fff 38%,transparent 40%);background-size:14px 7px}.film:before{top:4px}.film:after{bottom:4px}.frame{min-height:170px;margin:11px 0;border-radius:11px;padding:13px;display:flex;flex-direction:column;justify-content:flex-end;background:linear-gradient(145deg,var(--sky),var(--yellow),var(--pink))}.film:nth-child(2) .frame{background:linear-gradient(145deg,#cce57d,var(--green),#ffb13c)}.film:nth-child(3) .frame{background:linear-gradient(145deg,var(--purple),var(--sky),#f7f0e6)}.play{width:50px;height:50px;border-radius:50%;display:grid;place-items:center;background:#ffffffd9;box-shadow:0 5px 0 #0001;margin-bottom:10px}.frame h4{margin:0 0 5px;font-size:19px}.frame p{margin:0;font-size:13px}
+.meters{display:grid;gap:11px}.mh{display:flex;justify-content:space-between;gap:10px;font-weight:800}.bar{height:13px;border-radius:999px;overflow:hidden;background:#0001}.bar i{display:block;height:100%;border-radius:999px;background:linear-gradient(90deg,var(--red),var(--purple),var(--blue),var(--yellow))}
+.lang{display:grid;gap:9px}.lang div{display:flex;justify-content:space-between;gap:10px;background:#fff;border:2px solid #0001;border-radius:15px;padding:11px 13px;font-weight:700}.contact{text-align:center;background:linear-gradient(140deg,#ffffffdd,#ff76b722,#97d8ff44)}.contactlinks{display:grid;gap:9px;margin-top:14px}
+footer{text-align:center;padding:18px 0 0;font-size:12px;font-weight:700;opacity:.7}
+@media(max-width:860px){.grid{grid-template-columns:1fr}.stack{position:relative;right:auto;top:auto;width:100%;margin-top:15px}.paper{margin-left:0;margin-top:112px}.films{grid-template-columns:1fr}.sun{right:20px;width:105px;height:105px}.burst{width:140px;height:140px}}
+@media(max-width:600px){.wrap{width:calc(100% - 16px)}.hero{padding:16px 12px}.paper{padding:15px;margin-top:100px}.title{font-size:42px;gap:5px}.title span{min-width:38px;padding:6px 7px}.icons{grid-template-columns:1fr}.card{padding:17px}.hero p{font-size:15px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top"><div class="logo">MICAELA<br><span>MESSINA</span></div><nav><a href="#about">About</a><a href="#projects">Projects</a><a href="#videos">Videos</a><a href="#contact">Contact</a></nav></header>
+
+<section class="hero"><div class="burst"></div><div class="sun"></div>
+<div class="paper"><div class="tape"></div>
+<h1 class="title"><span class="a">P</span><span class="b">O</span><span class="c">R</span><span class="d">T</span><span class="e">F</span><span class="f">O</span><span class="g">L</span><span class="h">I</span><span class="i">O</span></h1>
+<p>Hi, I'm <strong>Mica</strong> — comunicadora digital y editora de video. Me gusta crear piezas visuales con personalidad, ritmo y una identidad que se sienta viva. Este portfolio mezcla creatividad, edición y un look scrapbook/editorial.</p>
+<div class="mini"><span class="chip">video editing</span><span class="chip">creative marketing</span><span class="chip">digital communication</span><span class="chip">social content</span></div></div>
+<div class="stack"><div class="pill p1">VIDEO EDITING</div><div class="pill p2">CREATIVE</div><div class="pill p3">by Micaela Messina</div></div>
+</section>
+
+<section class="section grid" id="about">
+<article class="card"><span class="label">ABOUT ME</span><h2>Creativity, timing & content that actually feels alive.</h2><p>Soy comunicadora digital y trabajo especialmente con edición de video, contenido para redes y piezas visuales pensadas para plataformas digitales. Me interesa combinar intuición creativa con estrategia y encontrar una versión final que no solo se vea bien, sino que también se sienta bien.</p><p>Desde 2020 trabajo como editora freelance, y también tengo experiencia en marketing digital promocionando canciones y artistas a nivel global a través de video edits.</p><div class="note">tiny fun fact: sí, puedo quedarme ajustando un corte 0.2 segundos si mejora el ritmo.</div></article>
+<article class="card"><span class="label">THIS STYLE FITS ME BECAUSE...</span><div class="icons"><div><b>✂️</b>Edición con ritmo y personalidad</div><div><b>🎞️</b>Visuales pensados para pantalla</div><div><b>💿</b>Estética pop / editorial / internet</div><div><b>🖇️</b>Capas, textura y collage creativo</div></div></article>
+</section>
+
+<section class="section" id="projects"><article class="card"><span class="label">PROJECTS & EXPERIENCE</span><h2>Selected work</h2><div class="projects">
+<div class="card proj"><div class="projtop"><div><h3>Hundred Days Digital</h3><strong>Digital Marketing · Music Promotion</strong></div><div class="num">01</div></div><p>Promoción de canciones y artistas a nivel mundial mediante video edits creados para redes y distribución digital.</p><div class="tags"><span>music marketing</span><span>social media</span><span>creative edits</span></div></div>
+<div class="card proj"><div class="projtop"><div><h3>Freelance Video Editing</h3><strong>2020 — Presente</strong></div><div class="num">02</div></div><p>Edición y postproducción de contenido audiovisual para plataformas digitales y redes sociales, adaptando piezas a distintos formatos, ritmos y estilos visuales.</p><div class="tags"><span>editing</span><span>postproduction</span><span>short-form content</span></div></div>
+<div class="card proj"><div class="projtop"><div><h3>Grand Floridian TV</h3><strong>Personal Web Project</strong></div><div class="num">03</div></div><p>Experiencia web inmersiva inspirada en una pantalla de resort Disney, con UI custom, navegación visual y una propuesta nostálgica e interactiva.</p><div class="tags"><span>web design</span><span>creative interface</span><span>immersive concept</span></div></div>
+<div class="card proj"><div class="projtop"><div><h3>Y2K Creative Project</h3><strong>University Project</strong></div><div class="num">04</div></div><p>Proyecto visual inspirado en la cultura Y2K, desarrollado con investigación UX, exploración estética y enfoque mobile-first.</p><div class="tags"><span>ux research</span><span>trend analysis</span><span>creative direction</span></div></div>
+</div></article></section>
+
+<section class="section" id="videos"><article class="card"><span class="label">VIDEO SECTION</span><h2>Ready for your edits</h2><p>Acá voy a agregar tus videos reales. La sección está diseñada como una tira de película para que el portfolio se sienta directamente conectado con la edición.</p><div class="films">
+<div class="film"><div class="frame"><div class="play">▶</div><h4>Video 01</h4><p>Music promo, reel o edit corto.</p></div></div>
+<div class="film"><div class="frame"><div class="play">▶</div><h4>Video 02</h4><p>Contenido social o branded.</p></div></div>
+<div class="film"><div class="frame"><div class="play">▶</div><h4>Video 03</h4><p>Showreel o pieza destacada.</p></div></div>
+</div></article></section>
+
+<section class="section grid">
+<article class="card"><span class="label">TOOLS</span><h2>Creative toolbox</h2><div class="meters">
+<div><div class="mh"><span>CapCut</span><span>Advanced</span></div><div class="bar"><i style="width:95%"></i></div></div>
+<div><div class="mh"><span>Premiere Pro</span><span>Intermediate</span></div><div class="bar"><i style="width:82%"></i></div></div>
+<div><div class="mh"><span>After Effects</span><span>Intermediate</span></div><div class="bar"><i style="width:80%"></i></div></div>
+<div><div class="mh"><span>Photoshop</span><span>Intermediate</span></div><div class="bar"><i style="width:78%"></i></div></div>
+<div><div class="mh"><span>Illustrator</span><span>Intermediate</span></div><div class="bar"><i style="width:76%"></i></div></div>
+<div><div class="mh"><span>Adobe XD</span><span>Working knowledge</span></div><div class="bar"><i style="width:68%"></i></div></div>
+</div></article>
+<article class="card"><span class="label">LANGUAGES</span><h2>How I communicate</h2><div class="lang"><div><span>Spanish</span><span>Native</span></div><div><span>English</span><span>C2</span></div><div><span>Portuguese</span><span>Intermediate</span></div><div><span>Italian</span><span>Basic</span></div><div><span>Latin</span><span>Basic</span></div></div><div class="note" style="background:#bfd6b4;margin-top:15px">Y2K · editorial layouts · playful interfaces · visual storytelling</div></article>
+</section>
+
+<section class="section" id="contact"><article class="card contact"><span class="label">CONTACT</span><h2>Let's make something cool.</h2><p>Si querés una editora/comunicadora que combine creatividad, criterio visual y sensibilidad para redes, me encantaría trabajar juntas.</p><div class="contactlinks"><a href="mailto:micamessina05@gmail.com">micamessina05@gmail.com</a><a href="https://instagram.com/brdshawslovr" target="_blank">Instagram · @brdshawslovr</a></div></article></section>
+<footer>Portfolio web · Micaela Messina ✦ scrapbook / editing-inspired</footer>
+</div>
+</body>
+</html>
